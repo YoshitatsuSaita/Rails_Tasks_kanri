@@ -7,7 +7,7 @@
 
 - Docker / Docker Compose
 - Ruby（コンテナ内）
-- Git
+- Git(HTTPSからSSH通信へ変更)
 - （任意）Heroku
 
 ## セットアップ
