@@ -4,21 +4,36 @@
 
 $modal-content-bg: #fff; // デフォルト上書き
 $modal-backdrop-bg: #000;
-$modal-backdrop-opacity: .6;
+$modal-backdrop-opacity: 0.6;
 
 /* 共通 */
 body {
   padding-top: 60px;
 }
 
-section { overflow: auto; }
-textarea { resize: vertical; }
+section {
+  overflow: auto;
+}
+textarea {
+  resize: vertical;
+}
 
-.center { text-align: center; }
-.center h1 { margin-bottom: 10px; }
+.center {
+  text-align: center;
+}
+.center h1 {
+  margin-bottom: 10px;
+}
 
 /* タイポグラフィ */
-h1, h2, h3, h4, h5, h6 { line-height: 1; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+}
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
@@ -33,7 +48,10 @@ h2 {
   font-weight: normal;
   color: #777;
 }
-p { font-size: 1.1em; line-height: 1.7em; }
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
 
 /* ヘッダー */
 #logo {
@@ -41,13 +59,33 @@ p { font-size: 1.1em; line-height: 1.7em; }
   margin-right: 10px;
   font-size: 1.7em;
   color: #fff;
-  text-transform: uppercase;
+  font-style: italic;
+  //text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
 }
-#logo:hover { color: #fff; text-decoration: none; }
+#logo:hover {
+  color: #bbb;
+  text-decoration: none;
+}
 
+.navbar {
+  background-color: teal;
+}
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+  background-color: teal;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #fff;
+  font-weight: bold;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #bbb;
+}
 /* デバッグウインドウ */
 .debug_dump {
   clear: both;
