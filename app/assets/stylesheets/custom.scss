@@ -109,3 +109,17 @@ p {
     color: $brand-danger;
   }
 }
+/*トップページ*/
+#top-main {
+  background-color: #fff;
+}
+
+#top-main-title {
+  font-style: italic;
+  font-weight: bold;
+}
+
+#remember-me {
+  margin-left: 0px;
+  position: static;
+}
