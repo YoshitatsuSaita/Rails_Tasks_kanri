@@ -30,6 +30,10 @@ class TasksController < ApplicationController
       render :edit
     end
   end
+
+  def show
+    @task = Task.find(params[:id])
+  end
   
   private
   

@@ -10,7 +10,14 @@
       </thead>
       <tbody>
         <% @tasks.each do |task| %> 
-          <tr><td><%= task.name %></td><td><%= task.created_at %></td><td><%= link_to "編集", edit_user_task_path(@user,task), class: "btn btn-success btn-detail" %><%= link_to "削除", user_task_path(@user, task), method: :delete, class: "btn btn-danger btn-detail" %></td></tr>
+          <tr>
+            <td><%= link_to task.name, user_task_path(@user,task), class: "task-name"%></td>
+            <td><%= task.created_at %></td>
+            <td>
+              <%= link_to "編集", edit_user_task_path(@user,task), class: "btn btn-success btn-detail" %>
+              <%= link_to "削除", user_task_path(@user, task), method: :delete, class: "btn btn-danger btn-detail" %>
+            </td>
+          </tr>
         <% end %>  
       </tbody>
     </table>
