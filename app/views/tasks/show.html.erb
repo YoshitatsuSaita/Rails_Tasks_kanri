@@ -27,7 +27,7 @@
     </table>
     <div>
       <%= link_to "編集", edit_user_task_path(@user,@task), class: "btn btn-success btn-detail" %>
-      <%= link_to "削除", user_task_path(@user, @task), method: :delete, class: "btn btn-danger btn-detail" %>
+      <%= link_to "削除", user_task_path(@user, @task), method: :delete, data: { confirm: "【確認】#{@task.name}を削除してもよろしいですか?" }, class: "btn btn-danger btn-detail" %>
     </div>
   </div>    
 </div>
