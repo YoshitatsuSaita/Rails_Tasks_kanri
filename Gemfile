@@ -21,7 +21,8 @@ gem 'popper_js',     '~> 1.16.0'
 # gem 'bootstrap',     '~> 4.6', '>= 4.6.2'
 gem 'coffee-rails', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.4.1'
-
+gem 'rails-i18n'
+gem 'rinku'
 
 group :development do
   gem 'listen', '~> 3.8'
