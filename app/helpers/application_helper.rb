@@ -8,4 +8,9 @@ module ApplicationHelper
       page_name + " | " + base_title
     end
   end
+
+
+  def format_datetime(datetime)
+    I18n.l(datetime, format: :long)
+  end
 end

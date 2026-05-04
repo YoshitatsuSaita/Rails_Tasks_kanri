@@ -18,11 +18,11 @@
       </tr>
       <tr>
         <th class="active"><%= Task.human_attribute_name :created_at %></th>
-        <td><%= @task.created_at %></td>
+        <td><%= format_datetime(@task.created_at) %></td>
       </tr>
       <tr>
         <th class="active"><%= Task.human_attribute_name :updated_at %></th>
-        <td><%= @task.updated_at %></td>
+        <td><%= format_datetime(@task.updated_at) %></td>
       </tr>
     </table>
     <div>
