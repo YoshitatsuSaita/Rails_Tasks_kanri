@@ -138,7 +138,7 @@ p {
   margin-right: 2px;
 }
 
-.table th {
+.active {
   text-align: center;
 }
 
@@ -146,6 +146,14 @@ p {
   vertical-align: middle !important ;
 }
 
+.label {
+  vertical-align: middle !important ;
+}
+
 .task-name {
   font-size: 1.5em;
+}
+
+.user-name {
+  font-size: 1.2em;
 }

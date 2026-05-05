@@ -15,6 +15,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem "tzinfo-data", platforms: %i[ mswin mswin64 mingw x64_mingw jruby ]
 
 gem 'will_paginate', '~> 3.3'
+gem 'bootstrap-will_paginate', '1.0.0'
 gem 'jquery-rails', '~> 4.6'
 gem 'sassc-rails', '~> 2.1'
 gem 'popper_js',     '~> 1.16.0'
