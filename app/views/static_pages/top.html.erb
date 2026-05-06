@@ -7,11 +7,7 @@
 
       <p>初めてのご利用</p>
       <center>
-        <% if logged_in? && !current_user.admin? %>
-        <%= link_to "アカウント作成", signup_path, class: "btn btn-lg btn-success" , disabled: true %>
-        <% else %>
-        <%= link_to "アカウント作成", signup_path, class: "btn btn-lg btn-success" %>
-        <% end %>
+        <%= link_to "アカウント作成", signup_path, class: "btn btn-lg btn-success #{ ' disabled' if logged_in? && !current_user.admin? }" %>
       </center>
     </div>
   </div>

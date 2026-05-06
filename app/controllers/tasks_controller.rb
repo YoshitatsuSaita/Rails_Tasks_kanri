@@ -1,4 +1,7 @@
 class TasksController < ApplicationController
+  before_action :logged_in_user 
+  before_action :correct_task_user
+
   def index
     @tasks = @user.tasks.order(created_at: :desc)
   end
@@ -46,5 +49,28 @@ class TasksController < ApplicationController
   
   def user_params
     params.require(:task).permit(:name, :detail)
+  end
+
+  def correct_task_user                        
+    # チェック1: URLのユーザーIDが自分でない → 全アクションで確認                
+    if current_user.id != params[:user_id].to_i                                  
+      case action_name    
+      when "edit", "update"                                                      
+        flash[:danger] = '権限がありません。'           
+        redirect_to user_tasks_path(@user)
+      else                                                                       
+        redirect_to root_path
+      end                                                                        
+      return  # ここで止める（チェック2に進まない）     
+    end                                                                          
+                                               
+    # チェック2: タスクのオーナーが自分でない → edit/updateのみ確認              
+    if action_name.in?(["edit", "update"])              
+      task = Task.find(params[:id])                                              
+      if task.user_id != current_user.id                
+        flash[:danger] = '権限がありません。'
+        redirect_to user_tasks_path(@user)     
+      end                                                                        
+    end
   end
 end
